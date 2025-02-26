@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:focus_fields/components/custom_bottom_navigation_bar.dart';
 import 'package:focus_fields/pages/challenge_tab.dart';
 import 'package:focus_fields/pages/chart.dart';
 import 'package:focus_fields/pages/farm.dart';
@@ -50,50 +51,43 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: _screens[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.grey[900],
+      bottomNavigationBar: CustomBottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
           });
         },
-        type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/icons/list-todo.svg',
-              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
-            ),
-            label: '',
+          SvgPicture.asset(
+            'assets/icons/list-todo.svg',
+            height: 24,
+            width: 24,
+            colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
           ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/icons/hammer.svg',
-              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
-            ),
-            label: '',
+          SvgPicture.asset(
+            'assets/icons/hammer.svg',
+            height: 24,
+            width: 24,
+            colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
           ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/icons/farm.svg',
-              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
-            ),
-            label: '',
+          SvgPicture.asset(
+            'assets/icons/farm.svg',
+            height: 24,
+            width: 24,
+            colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
           ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/icons/chart-spline.svg',
-              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
-            ),
-            label: '',
+          SvgPicture.asset(
+            'assets/icons/chart-spline.svg',
+            height: 24,
+            width: 24,
+            colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
           ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/icons/user.svg',
-              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
-            ),
-            label: '',
+          SvgPicture.asset(
+            'assets/icons/user.svg',
+            height: 24,
+            width: 24,
+            colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
           ),
         ],
       ),
