@@ -28,12 +28,19 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Focus Fields'),
+        titleTextStyle: TextStyle(
+          color: Colors.white,
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+        ),
+        backgroundColor: Colors.grey[900],
         actions: [
           IconButton(
             icon: SvgPicture.asset(
               'assets/icons/coins.svg',
               height: 24,
               width: 24,
+              colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
             ),
             onPressed: () {},
           ),
@@ -42,6 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
               'assets/icons/clover.svg',
               height: 24,
               width: 24,
+              colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
             ),
             onPressed: () {},
           ),
