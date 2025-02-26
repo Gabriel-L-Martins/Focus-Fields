@@ -18,6 +18,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Colors.grey[900],
+        scaffoldBackgroundColor: Colors.grey[850],
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.grey[900],
+          titleTextStyle: const TextStyle(
+            color: Colors.white70,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Focus Fields',
       home: const HomeScreen(),

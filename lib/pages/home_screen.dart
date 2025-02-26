@@ -28,19 +28,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Focus Fields'),
-        titleTextStyle: TextStyle(
-          color: Colors.white,
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-        ),
-        backgroundColor: Colors.grey[900],
         actions: [
           IconButton(
             icon: SvgPicture.asset(
               'assets/icons/coins.svg',
               height: 24,
               width: 24,
-              colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
             ),
             onPressed: () {},
           ),
@@ -49,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
               'assets/icons/clover.svg',
               height: 24,
               width: 24,
-              colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
             ),
             onPressed: () {},
           ),
@@ -57,6 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.grey[900],
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
@@ -66,23 +61,38 @@ class _HomeScreenState extends State<HomeScreen> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/list-todo.svg'),
+            icon: SvgPicture.asset(
+              'assets/icons/list-todo.svg',
+              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
+            ),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/hammer.svg'),
+            icon: SvgPicture.asset(
+              'assets/icons/hammer.svg',
+              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
+            ),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/farm.svg'),
+            icon: SvgPicture.asset(
+              'assets/icons/farm.svg',
+              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
+            ),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/chart-spline.svg'),
+            icon: SvgPicture.asset(
+              'assets/icons/chart-spline.svg',
+              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
+            ),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/user.svg'),
+            icon: SvgPicture.asset(
+              'assets/icons/user.svg',
+              colorFilter: ColorFilter.mode(Colors.white70, BlendMode.srcIn),
+            ),
             label: '',
           ),
         ],
