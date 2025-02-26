@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _currentIndex = 0;
+  int _currentIndex = 2;
   final List<Widget> _screens = const [
     ChallengeTab(),
     Chart(),
@@ -59,23 +59,23 @@ class _HomeScreenState extends State<HomeScreen> {
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icons/list-todo.svg'),
-            label: 'Challenge',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icons/chart-spline.svg'),
-            label: 'Chart',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icons/farm.svg'),
-            label: 'Farm',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icons/user.svg'),
-            label: 'Profile',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icons/hammer.svg'),
-            label: 'Tools',
+            label: '',
           ),
         ],
       ),
