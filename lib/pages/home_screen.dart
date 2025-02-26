@@ -17,10 +17,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 2;
   final List<Widget> _screens = const [
     ChallengeTab(),
-    Chart(),
-    Farm(),
-    Profile(),
     Tools(),
+    Farm(),
+    Chart(),
+    Profile(),
   ];
 
   @override
