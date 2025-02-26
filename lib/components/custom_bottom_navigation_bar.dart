@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
   final int currentIndex;
   final Function(int) onTap;
-  final List<Widget> items;
+  final List<String> iconPaths;
 
   const CustomBottomNavigationBar({
     super.key,
     required this.currentIndex,
     required this.onTap,
-    required this.items,
+    required this.iconPaths,
   });
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final itemWidth = constraints.maxWidth / items.length;
+        final itemWidth = constraints.maxWidth / iconPaths.length;
         return Padding(
           padding: const EdgeInsets.only(bottom: 8),
           child: SizedBox(
@@ -39,7 +40,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
                   ),
                 ),
                 Row(
-                  children: List.generate(items.length, (index) {
+                  children: List.generate(iconPaths.length, (index) {
                     return Expanded(
                       child: GestureDetector(
                         behavior: HitTestBehavior.opaque,
@@ -47,7 +48,17 @@ class CustomBottomNavigationBar extends StatelessWidget {
                         child: Container(
                           padding: const EdgeInsets.symmetric(vertical: 12),
                           alignment: Alignment.center,
-                          child: items[index],
+                          child: SvgPicture.asset(
+                            iconPaths[index],
+                            height: 24,
+                            width: 24,
+                            colorFilter: ColorFilter.mode(
+                              currentIndex == index
+                                  ? Colors.white
+                                  : Colors.white70,
+                              BlendMode.srcIn,
+                            ),
+                          ),
                         ),
                       ),
                     );

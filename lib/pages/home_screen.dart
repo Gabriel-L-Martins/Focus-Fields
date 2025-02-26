@@ -24,6 +24,15 @@ class _HomeScreenState extends State<HomeScreen> {
     Profile(),
   ];
 
+  // List of icon paths used in the custom navigation bar.
+  final List<String> _iconPaths = const [
+    'assets/icons/list-todo.svg',
+    'assets/icons/hammer.svg',
+    'assets/icons/farm.svg',
+    'assets/icons/chart-spline.svg',
+    'assets/icons/user.svg',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,38 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
             _currentIndex = index;
           });
         },
-        items: [
-          SvgPicture.asset(
-            'assets/icons/list-todo.svg',
-            height: 24,
-            width: 24,
-            colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
-          ),
-          SvgPicture.asset(
-            'assets/icons/hammer.svg',
-            height: 24,
-            width: 24,
-            colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
-          ),
-          SvgPicture.asset(
-            'assets/icons/farm.svg',
-            height: 24,
-            width: 24,
-            colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
-          ),
-          SvgPicture.asset(
-            'assets/icons/chart-spline.svg',
-            height: 24,
-            width: 24,
-            colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
-          ),
-          SvgPicture.asset(
-            'assets/icons/user.svg',
-            height: 24,
-            width: 24,
-            colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
-          ),
-        ],
+        iconPaths: _iconPaths,
       ),
     );
   }
