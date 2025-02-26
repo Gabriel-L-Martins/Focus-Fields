@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:focus_fields/pages/home_screen.dart';
+import 'package:focus_fields/providers/challenge_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => ChallengeProvider())],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -9,6 +17,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Focus Fields',
+      home: const HomeScreen(),
+    );
   }
 }
