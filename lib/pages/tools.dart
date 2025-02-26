@@ -5,9 +5,6 @@ class Tools extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Tools')),
-      body: const Center(child: Text('Tools Screen')),
-    );
+    return Center(child: const Text('Tools'));
   }
 }
