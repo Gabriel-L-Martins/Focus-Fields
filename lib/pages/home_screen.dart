@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/chart-spline.svg'),
+            icon: SvgPicture.asset('assets/icons/hammer.svg'),
             label: '',
           ),
           BottomNavigationBarItem(
@@ -78,11 +78,11 @@ class _HomeScreenState extends State<HomeScreen> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/user.svg'),
+            icon: SvgPicture.asset('assets/icons/chart-spline.svg'),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/hammer.svg'),
+            icon: SvgPicture.asset('assets/icons/user.svg'),
             label: '',
           ),
         ],
