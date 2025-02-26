@@ -5,6 +5,9 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: const Text('Chart')),
+      body: const Center(child: Text('Chart Screen')),
+    );
   }
 }
